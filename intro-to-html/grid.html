@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body style="padding-bottom:100px;">
+    <!-- we will be learning the concept of using CSS GRID
+    instead of setting the display property to inline-block, as this can cause some issues
+    with the spacing and alignment.
+  
+    Inline style - another way of writing CSS. Example - the below style attribute in the div element.
+  
+    In this file, we are going to create a grid.(of rows and columns) using the STYLE attribute
+      1. display - is set to grid
+      2. grid-template-columns - tells us the width of each column and the number of sizes
+                                 determines the number of columns.
+      3. -->
+    <div style="
+      display: grid;
+      grid-template-columns: 100px 100px;
+    ">
+      <div style="background-color: lightblue;">div 1</div>
+      <div style="background-color: lightpink;">div 2</div>
+    </div>
+
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 100px 200px;
+    ">
+      <!-- According to the above grid-template-columns attribute, the maximum size of the
+      grid is 100+100+200 = 400px.
+      
+      So, If we add a div, which results in more than 400px, then that div is automatically filled in
+      as a new row. Example - div 4 in the below code.-->
+      <div style="background-color: lightblue;">div 1</div>
+      <div style="background-color: lightpink;">div 2</div>
+      <div style="background-color: lightblue;">div 3</div>
+      <div style="background-color: lightblue;">div 4</div>
+    </div>
+
+    <!-- fr - It is a special value in grid and stands for free space.
+        It means to take the remaining amount of space inside the grid as the width of this column.
+        ** - The number before the letters 'fr' respresents the relative amount of the
+        remaining space in thr grid, which the column gets.
+        Example 100px 1fr 1fr - get the second and third column with 50% each
+        Example2 100px 1fr 2fr -
+                  - second column - 1/3rd of the remaining space.
+                  - third column - 2/3rd of the remaining space.
+    -->
+    <div style="
+    margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+    ">
+    <div style="background-color: lightblue;">div 1</div>
+    <div style="background-color: lightpink;">div 2</div>
+    </div>
+
+    <div style="
+    margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr 1fr;
+    ">
+    <div style="background-color: lightblue;">div 1</div>
+    <div style="background-color: lightpink;">1 fr</div>
+    <div style="background-color: lightblue;">1 fr</div>
+    </div>
+
+    <div style="
+    margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr 2fr;
+    ">
+    <div style="background-color: lightblue;">div 1</div>
+    <div style="background-color: lightpink;">1 fr</div>
+    <div style="background-color: lightblue;">2 fr</div>
+    </div>
+
+    <div style="
+    margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 40px;
+    ">
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
+    <div style="background-color: lightpink; height: 200px;">1 fr</div>
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
+    <div style="background-color: lightpink; height: 200px;">1 fr</div>
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
+    <div style="background-color: lightpink; height: 200px;">1 fr</div>
+    </div>
+
+  </body>
+</html>
