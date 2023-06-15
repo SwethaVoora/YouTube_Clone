@@ -11,7 +11,7 @@ This is a front-end project that replicates the appearance of a YouTube page whe
 1. Clone the repository:
 
 ```
-git clone https://github.com/SwethaVoora/youtube_clone.git
+git clone https://github.com/SwethaVoora/Youtube_Clone.git
 ```
 
 2. Open the **youtube.html** file in your web browser.
